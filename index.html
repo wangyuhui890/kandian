@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>看点资讯</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrapSwitch/css/bootstrap3/bootstrap-switch.min.css">
+	<link rel="stylesheet" href="css/iconFont/iconfont.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/highcharts.js"></script>
+	<script src="css/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="css/bootstrapSwitch/js/bootstrap-switch.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/config.js"></script>
+	<link rel="stylesheet" href="./style.css">
+	<script>
+		$(function(){
+			$('.left').css('height','150vh');
+			$('.right').css('height','150vh');
+			// $('.list-inline').css('padding','15px');
+			$('.contentRight').load('1-shouye.html');
+			$('.left ul').on({
+				click:function(){
+					// alert('1');
+					if($(this).text()=="首页"){
+						$('.contentRight').load('1-shouye.html');
+						return;
+					}
+					if($(this).text()=="栏目管理"){
+						$('.contentRight').load('1-lanmu.html');
+						return;
+					}
+					if($(this).text()=='资讯管理'){
+						$('.contentRight').load('1-zixun.html');
+						return;
+					}
+					if($(this).text()=='用户管理'){
+						$('.contentRight').load('1-user.html');
+						return;
+					}
+				}	
+			},'li');
+				});
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="left col-sm-2">
+				<div class="left_first">
+					<img src="u9.png" alt="">
+					<span>看点资讯</span>
+				</div>
+				<ul class="list-unstyled left_ul">
+					<li ><img src="u52.png" alt="">首页<span class="glyphicon glyphicon-menu-right"></span></li>
+					<li><img src="u43.png" alt="">栏目管理<span class="glyphicon glyphicon-menu-right"></span></li>
+					<li><img src="u36.png" alt="">资讯管理<span class="glyphicon glyphicon-menu-right"></span></li>
+					<li><img src="u22.png" alt="">用户管理<span class="glyphicon glyphicon-menu-right"></span></li>
+				</ul>
+			</div>
+			<div class="right col-sm-8 bg-success">
+				<ul class="list-unstyled list-inline Top">
+					<li>
+						<i class="iconfont icon-liebiao1"></i>
+						<i class="iconfont icon-laba"></i>						
+						<span class="num">4</span>
+					</li>
+					<li class="beauty"><img src="child.jpg" alt=""> 优秀的人 <span class="glyphicon glyphicon-menu-right"></span></li>
+				</ul>	
+				<div class="contentRight"></div>
+			</div>
+			<div class="col-sm-1"></div>
+			<!-- <div class="bg-success"></div> -->
+		</div>
+	</div>
+</body>
+</html>
